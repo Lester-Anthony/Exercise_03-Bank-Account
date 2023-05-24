@@ -67,7 +67,12 @@ public class BankAccount {
         return cashBalance;
     }
 
-
+    /**
+     * Credits money to the bank account's cash balance
+     * 
+     * @param money The money to be creddited to the account
+     * @return true if action was successful, false if otherwise
+     */
     public boolean creditMoney(int money) {
         if(money < 0)
             return false;
@@ -77,6 +82,12 @@ public class BankAccount {
         }
     }
 
+    /**
+     * Debits money from the bank account's cash balance
+     * 
+     * @param money The money to be debited from the account
+     * @return true if action was successful, false if otherwise
+     */
     public boolean debitMoney(int money) {
         if(cashBalance < money)
             return false;
@@ -86,6 +97,11 @@ public class BankAccount {
         }
     }
 
+    /**
+     * Inquires the accounts ID number, account name, and cash balance
+     * 
+     * @return ID number, account name, and cash balance as a string
+     */
     public String inquireAccount() {
         return idNumber + " " + accountName + " : " + cashBalance;
     }
