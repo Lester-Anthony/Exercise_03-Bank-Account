@@ -73,7 +73,7 @@ public class BankAccount {
      * @param money The money to be creddited to the account
      * @return true if action was successful, false if otherwise
      */
-    public boolean creditMoney(int money) {
+    public boolean creditMoney(float money) {
         if(money < 0)
             return false;
         else {
@@ -88,7 +88,7 @@ public class BankAccount {
      * @param money The money to be debited from the account
      * @return true if action was successful, false if otherwise
      */
-    public boolean debitMoney(int money) {
+    public boolean debitMoney(float money) {
         if(cashBalance < money)
             return false;
         else {
