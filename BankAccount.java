@@ -103,6 +103,6 @@ public class BankAccount {
      * @return ID number, account name, and cash balance as a string
      */
     public String inquireAccount() {
-        return "  " + getIdNumber() + " " + getAccountName() + " : " + getCashBalance();
+        return "  " + getIdNumber() + " " + getAccountName() + " : ₱" + getCashBalance();
     }
 }

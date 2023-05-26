@@ -76,7 +76,7 @@ public class Main {
                     }
                     
                 } while(result == false);
-                System.out.println("  Current Balance : " + ba.getCashBalance());
+                System.out.println("  Current Balance : ₱" + ba.getCashBalance());
                 System.out.println(">----------------------------------<");
             }
             
@@ -93,7 +93,7 @@ public class Main {
                     }
                     
                 } while(result == false);
-                System.out.println("  Current Balance : " + ba.getCashBalance());
+                System.out.println("  Current Balance : ₱" + ba.getCashBalance());
                 System.out.println(">----------------------------------<");
             }
             
