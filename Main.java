@@ -13,7 +13,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println(">---------------BANK---------------<");
+        System.out.println(">--------------------BANK--------------------<");
 
         // User enters ID number
         do {
@@ -46,7 +46,7 @@ public class Main {
 
         BankAccount account = new BankAccount(idNumber, accountName, cashBalance);
 
-        System.out.println(">----------------------------------<");
+        System.out.println(">--------------------------------------------<");
 
         while(run == false) {
 
@@ -66,7 +66,7 @@ public class Main {
     
             } while(choice < 1 || choice > 4);
     
-            System.out.println(">----------------------------------<");
+            System.out.println(">--------------------------------------------<");
             
             // Option 1 | Credit Money
             if(choice == 1) {
@@ -82,7 +82,7 @@ public class Main {
                     
                 } while(result == false);
                 System.out.println("  Current Balance : ₱" + account.getCashBalance());
-                System.out.println(">----------------------------------<");
+                System.out.println(">--------------------------------------------<");
             }
             
             // Option 2 | Debit Money
@@ -99,13 +99,13 @@ public class Main {
                     
                 } while(result == false);
                 System.out.println("  Current Balance : ₱" + account.getCashBalance());
-                System.out.println(">----------------------------------<");
+                System.out.println(">--------------------------------------------<");
             }
             
             // Option 3 | Inquire Account
             if(choice == 3) {
                 System.out.println(account.inquireAccount());
-                System.out.println(">----------------------------------<");
+                System.out.println(">--------------------------------------------<");
             }
     
             // Option 4 | Exit Program
