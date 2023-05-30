@@ -12,7 +12,6 @@ public class Main {
         float cashBalance;
 
         Scanner sc = new Scanner(System.in);
-        // BankAccount ba = new BankAccount();
 
         System.out.println(">---------------BANK---------------<");
 
