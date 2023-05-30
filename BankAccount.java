@@ -17,6 +17,19 @@ public class BankAccount {
     private float cashBalance;
 
     /**
+     * Constructs a BankAccount object with the specified ID number, account name, and cash balance.
+     *
+     * @param idNumber     The bank account's ID number
+     * @param accountName  The name of the bank account owner
+     * @param cashBalance  The current balance of the bank account
+     */
+    public BankAccount(int idNumber, String accountName, float cashBalance) {
+        this.idNumber = idNumber;
+        this.accountName = accountName;
+        this.cashBalance = cashBalance;
+    }
+
+    /**
      * Sets the bank account's ID number
      * 
      * @param idNumber The bank account's ID number

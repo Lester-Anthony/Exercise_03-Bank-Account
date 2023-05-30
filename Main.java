@@ -7,39 +7,45 @@ public class Main {
         float money;
         boolean result, run = false;
 
+        int idNumber;
+        String accountName;
+        float cashBalance;
+
         Scanner sc = new Scanner(System.in);
-        BankAccount ba = new BankAccount();
+        // BankAccount ba = new BankAccount();
 
         System.out.println(">---------------BANK---------------<");
 
         // User enters ID number
         do {
             System.out.print("  ID Number    : ");
-            ba.setIdNumber(0);
-            ba.setIdNumber(sc.nextInt());
+            idNumber = 0;
+            idNumber = sc.nextInt();
             sc.nextLine();
 
-            if(ba.getIdNumber() < 1) {
+            if(idNumber < 1) {
                 System.out.println("      Invalid ID number.");
             }
-        } while (ba.getIdNumber() < 1);
+        } while (idNumber< 1);
         
         
         // User enters account name
         System.out.print("  Account Name : ");
-        ba.setAccountName(sc.nextLine());
+        accountName = sc.nextLine();
     
         // User enters cash balance
         do {
             System.out.print("  Cash Balance : ");
-            ba.setCashBalance(0);
-            ba.setCashBalance(sc.nextFloat());
+            cashBalance = 0;
+            cashBalance = sc.nextFloat();
             sc.nextLine();
 
-            if(ba.getCashBalance() < 0) {
+            if(cashBalance < 0) {
                 System.out.println("      Invalid cash balance.");
             }
-        } while(ba.getCashBalance() < 0);
+        } while(cashBalance < 0);
+
+        BankAccount account = new BankAccount(idNumber, accountName, cashBalance);
 
         System.out.println(">----------------------------------<");
 
@@ -69,14 +75,14 @@ public class Main {
                     result = false;
                     System.out.print("  Enter amount to be credited : ");
                     money = sc.nextFloat();
-                    result = ba.creditMoney(money);
+                    result = account.creditMoney(money);
                     
                     if(result == false) {
                         System.out.println("      Invalid input.");
                     }
                     
                 } while(result == false);
-                System.out.println("  Current Balance : ₱" + ba.getCashBalance());
+                System.out.println("  Current Balance : ₱" + account.getCashBalance());
                 System.out.println(">----------------------------------<");
             }
             
@@ -86,20 +92,20 @@ public class Main {
                     result = false;
                     System.out.print("  Enter amount to be debited : ");
                     money = sc.nextFloat();
-                    result = ba.debitMoney(money);
+                    result = account.debitMoney(money);
                     
                     if(result == false) {
                         System.out.println("      Invalid input.");
                     }
                     
                 } while(result == false);
-                System.out.println("  Current Balance : ₱" + ba.getCashBalance());
+                System.out.println("  Current Balance : ₱" + account.getCashBalance());
                 System.out.println(">----------------------------------<");
             }
             
             // Option 3 | Inquire Account
             if(choice == 3) {
-                System.out.println(ba.inquireAccount());
+                System.out.println(account.inquireAccount());
                 System.out.println(">----------------------------------<");
             }
     
